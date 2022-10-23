@@ -1,5 +1,6 @@
 import './css/styles.css';
-import { fetchCountries, countryList, countryInfo } from './fetchCountries';
+import { fetchCountries } from './fetchCountries';
+import { clearMarkup } from './dataProcessing';
 import debounce from 'lodash.debounce';
 
 const DEBOUNCE_DELAY = 300;
@@ -14,8 +15,7 @@ inputCountryName.addEventListener(
 function handlerInput(evt) {
   const countryName = evt.target.value.trim();
   if (countryName === '') {
-    countryInfo.innerHTML = '';
-    countryList.innerHTML = '';
+    clearMarkup();
     return;
   }
   fetchCountries(countryName);
