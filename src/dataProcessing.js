@@ -3,7 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-export function clearMarckup() {
+export function clearMarkup() {
   countryInfo.innerHTML = '';
   countryList.innerHTML = '';
 }
