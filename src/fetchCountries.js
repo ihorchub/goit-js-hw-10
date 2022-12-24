@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { clearMarckup, dataProcessing } from './dataProcessing';
+import { clearMarkup, dataProcessing } from './dataProcessing';
 
 const endpoint = 'https://restcountries.com/v3.1/name/';
 const param = 'fields=name,capital,population,flags,languages';
@@ -19,6 +19,6 @@ export function fetchCountries(name) {
         width: '500px',
         fontSize: '20px',
       });
-      clearMarckup();
+      clearMarkup();
     });
 }
